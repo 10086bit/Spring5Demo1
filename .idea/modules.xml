@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Spring5Demo1.iml" filepath="$PROJECT_DIR$/Spring5Demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringDB/SpringDB.iml" filepath="$PROJECT_DIR$/SpringDB/SpringDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Springdemo2/Springdemo2.iml" filepath="$PROJECT_DIR$/Springdemo2/Springdemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webSpring/webSpring/webSpring.iml" filepath="$PROJECT_DIR$/webSpring/webSpring/webSpring.iml" />
     </modules>
   </component>
 </project>

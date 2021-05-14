@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-        <bean id="user" class="com.zqt.spring5.User"></bean>
+        <bean id="user" class="com.zqt.spring5.User" scope="singleton">
+              <!--构造函数创建依赖  <constructor-arg name="name" value="李四"></constructor-arg>-->
+                <!--set函数创建依赖   <property name="name" value="zhangsan"></property>-->
+                <!--设置NULL-->
+                <!--  <property name="name">
+                        <null></null>
+                </property>
+-->
+                <!--特殊字符<==&lt>==&gt-->
+
+<!--                <property name="name" value="&lt;&lt;李四&gt;&gt; "></property>-->
+                <property name="name">
+                        <value><![CDATA[<<zhangsan>>]]></value>
+                </property>
+                <property name="course">
+                    <!--数组依赖的注入-->
+                    <array>
+                        <value>数据结构</value>
+                        <value>Spring 5</value>
+                    </array>
+
+                </property>
+            <!--map依赖的注入-->
+            <property name="core">
+                <map>
+                    <entry key="数据结构" value="22"></entry>
+                    <entry key="Spring5" value="33"></entry>
+                </map>
+            </property>
+            <!--list依赖注入-->
+            <property name="list">
+                <list>
+                    <!--如果是对象则用<ref bean="id值">-->
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                    <value>5</value>
+                </list>
+            </property>
+        </bean>
 </beans>
